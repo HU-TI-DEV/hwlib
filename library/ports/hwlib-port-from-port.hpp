@@ -251,7 +251,7 @@ public:
       slave.write( 0xFF );	 	  
    }	   
    
-   void direction_set_output(){
+   void direction_set_output() override {
       is_output = true;	   
       // nothing more to do
    }
@@ -302,7 +302,7 @@ public:
       slave.direction_set_input();  
    }	   
    
-   void direction_set_output(){
+   void direction_set_output() override {
       slave.direction_set_output(); 
    }
    

@@ -102,7 +102,7 @@ private:
    spi_bus & bus;
    pin_out & dc;
    pin_out & cs;
-   pin_out & rst;
+   [[maybe_unused]] pin_out & rst;
    
 public:
 

@@ -28,7 +28,7 @@ private:
    
 public:   
 
-   constexpr const image & operator[]( char c ) const override {
+   virtual const image & operator[]( char c ) const override {
       return images[ c & 0x7F ];      
    }      
 };

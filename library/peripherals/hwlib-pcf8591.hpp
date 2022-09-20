@@ -77,7 +77,7 @@ private:
          return chip.get( adc_channel );
       }   
       
-      void refresh(){
+      void refresh() override {
       }
    };
    
