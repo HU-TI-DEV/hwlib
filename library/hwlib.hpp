@@ -86,9 +86,19 @@
    #include HWLIB_INCLUDE( targets/hwlib-stm32f103c8.hpp )
 #endif
 
+#ifdef HWLIB_TARGET_stm32f401cc
+   #define HWLIB_TARGET
+   #include HWLIB_INCLUDE( targets/hwlib-stm32f401cc.hpp )
+#endif
+
 #ifdef BMPTK_TARGET_scouting_lock
    #define HWLIB_TARGET
    #include HWLIB_INCLUDE( hwlib-scouting-lock.hpp )
+#endif
+
+#ifdef BMPTK_TARGET_pi_pico
+   #define HWLIB_TARGET
+   #include HWLIB_INCLUDE( hwlib-pi-pico.hpp )
 #endif
 
 /// - HWLIB_TARGET_native : Windows native

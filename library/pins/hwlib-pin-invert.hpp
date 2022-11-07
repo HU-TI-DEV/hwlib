@@ -38,7 +38,7 @@ public:
    /// construct from a pin_out
    pin_invert_from_out_t( pin_out & slave ): slave( slave ){}
    
-   void write( bool x ){
+   void write( bool x ) override {
       slave.write( !x );
    }	
 
@@ -69,7 +69,7 @@ public:
    /// construct from a pin_in
    pin_invert_from_in_t( pin_in & slave ): slave( slave ){}
    
-   bool read(){
+   bool read() override {
       return ! slave.read();
    }	
 
@@ -100,11 +100,11 @@ public:
    /// construct from a pin_in_out
    pin_invert_from_in_out_t( pin_in_out & slave ): slave( slave ){}
    
-   bool read(){
+   bool read() override {
       return ! slave.read();
    }	
    
-   void write( bool x ){
+   void write( bool x ) override {
       slave.write( !x );
    }	
 
@@ -151,11 +151,11 @@ public:
    /// construct from a pin_oc
    pin_invert_from_oc_t( pin_oc & slave ): slave( slave ){}
    
-   bool read(){
+   bool read() override {
       return ! slave.read();
    }	
    
-   void write( bool x ){
+   void write( bool x ) override {
       slave.write( !x );
    }	
 

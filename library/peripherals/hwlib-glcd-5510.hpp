@@ -31,7 +31,7 @@ namespace hwlib {
 class glcd_5510 : public window {
 private:
    pin_out & sce;
-   pin_out & res;
+   [[maybe_unused]] pin_out & res;
    pin_out & dc;
    pin_out & sdin;
    pin_out & sclk;

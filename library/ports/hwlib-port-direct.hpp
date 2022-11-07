@@ -42,7 +42,7 @@ public:
    /// construct from a port_in_out
    port_direct_from_in_out_t( port_in_out & slave ): slave( slave ){}
    
-   uint_fast8_t number_of_pins(){
+   uint_fast8_t number_of_pins() override {
       return slave.number_of_pins();
    }	  
    
@@ -102,7 +102,7 @@ public:
    /// construct from a port_in
    port_direct_from_in_t( port_in & slave ): slave( slave ){}
   
-   uint_fast8_t number_of_pins(){
+   uint_fast8_t number_of_pins() override {
       return slave.number_of_pins();
    }	  
    
@@ -141,7 +141,7 @@ public:
    /// construct from a port_out
    port_direct_from_out_t( port_out & slave ): slave( slave ){}
 
-   uint_fast8_t number_of_pins(){
+   uint_fast8_t number_of_pins() override {
       return slave.number_of_pins();
    }	  
    
@@ -180,7 +180,7 @@ public:
    /// construct from a port_oc
    port_direct_from_oc_t( port_oc & slave ): slave( slave ){}
 
-   uint_fast8_t number_of_pins(){
+   uint_fast8_t number_of_pins() override {
       return slave.number_of_pins();
    }	  
    

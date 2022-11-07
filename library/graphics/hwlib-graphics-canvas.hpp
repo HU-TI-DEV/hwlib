@@ -23,11 +23,11 @@ private:
 
    color buffer[ size_x ][ size_y ];
     
-   void write_implementation( xy pos, color col ) override {
+   void write_implementation( xy pos, color col ) {
        buffer[ pos.x ][ pos.y ] = col;
    }    
    
-   color get_implementation( xy pos ) const override {
+   color get_implementation( xy pos ) const {
        return buffer[ pos.x ][ pos.y ];
    }
    

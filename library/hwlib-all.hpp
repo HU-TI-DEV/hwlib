@@ -96,10 +96,12 @@
 #include HWLIB_INCLUDE( peripherals/hwlib-hd44780.hpp )
 #include HWLIB_INCLUDE( peripherals/hwlib-glcd-5510.hpp )
 #include HWLIB_INCLUDE( peripherals/hwlib-glcd-oled.hpp )
+#include HWLIB_INCLUDE( peripherals/hwlib-apa102.hpp )
 #ifndef __AVR__
 #include HWLIB_INCLUDE( peripherals/hwlib-glcd-st7789.hpp )
 #endif
 #include HWLIB_INCLUDE( peripherals/hwlib-matrix-keypad.hpp )
 #include HWLIB_INCLUDE( peripherals/hwlib-servo-background.hpp )
+#include HWLIB_INCLUDE( peripherals/hwlib-sr04.hpp )
 
 #endif // HWLIB_ALL_H
