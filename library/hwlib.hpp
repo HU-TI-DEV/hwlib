@@ -96,6 +96,7 @@
    #include HWLIB_INCLUDE( hwlib-scouting-lock.hpp )
 #endif
 
+/// - HWLIB_TARGET_pi_pico : Raspberry Pi Pico (RP2040 chip)
 #ifdef BMPTK_TARGET_pi_pico
    #define HWLIB_TARGET
    #include HWLIB_INCLUDE( hwlib-pi-pico.hpp )

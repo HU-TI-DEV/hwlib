@@ -3,8 +3,8 @@
 //
 // File      : hwlib-pi-pico.hpp
 // Part of   : C++ hwlib library for close-to-the-hardware OO programming
-// Copyright : wouter@voti.nl 2021
-// Author    : Oscar Kromhout
+// Copyright : wouter@voti.nl 2021, Hogeschool Utrecht 2023
+// Author    : Oscar Kromhout, Hagen Patzke
 //
 // Distributed under the Boost Software License, Version 1.0.
 // (See accompanying file LICENSE_1_0.txt or copy at
@@ -13,11 +13,12 @@
 // ==========================================================================
 
 // this file contains Doxygen lines
-#include HWLIB_INCLUDE(../hwlib-all.hpp)
-#include "hwlib-mimxrt1062.hpp"
 
-#ifndef H_PI_PICO
-#define H_PI_PICO
+#ifndef HWLIB_PI_PICO
+#define HWLIB_PI_PICO
+
+#include HWLIB_INCLUDE(../hwlib-all.hpp)
+
 namespace pi_pico
 {
     /**
@@ -546,26 +547,28 @@ namespace pi_pico
 
 
 /**
- * @brief This namespace lets the hwlib::target point to hwlib::teensy_40
+ * @brief This namespace lets the hwlib::target point to hwlib::rp2040
  * 
  */
 namespace hwlib
 {
-namespace target = ::teensy_40;
+namespace target = ::pi_pico;
+const auto target_chip = target_chips::rp2040;
+const auto target_board = target_boards::pi_pico;
 
 void HWLIB_WEAK uart_putc( char c )
 {
-    teensy_40::uart_putc( c );
+    rp2040::uart_putc( c );
 }
 
 bool HWLIB_WEAK uart_char_available()
 {
-return teensy_40::uart_char_available();
+return rp2040::uart_char_available();
 }
 
 char HWLIB_WEAK uart_getc( )
 {
-return teensy_40::uart_getc();
+return rp2040::uart_getc();
 }
 
 #ifdef _HWLIB_ONCE
@@ -636,4 +639,4 @@ return teensy_40::uart_getc();
 
 };     // namespace hwlib
 
-#endif // H_PI_PICO
+#endif // HWLIB_PI_PICO
