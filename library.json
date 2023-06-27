@@ -1,0 +1,28 @@
+{
+    "$schema": "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
+    "name": "hwlib",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/HU-TI-DEV/hwlib"
+    },
+    "license": "BSL-1.0",
+    "authors": [
+        {
+            "name": "Wouter van Ooijen",
+            "email": "wouter@voti.nl",
+            "url": "https://voti.nl"
+        },
+        {
+            "name": "Jan Halsema",
+            "email": "jan.halsema@hu.nl",
+            "url": "https://mandejan.nl",
+            "maintainer": true
+        }
+    ],
+    "build": {
+        "includeDir": "library",
+        "srcDir": "library"
+    },
+    "headers": "hwlib.hpp"
+}
