@@ -119,5 +119,13 @@ namespace hwlib {
 #define HWLIB_BAUDRATE 1200    
 #endif   
 
+/// console baudrate
+///
+/// For some reason HWLIB uses it's build system macro BMPTK_BAUDRATE over it's own defines,
+/// It'd probably be wise to change all occurrences of that, but for now, this works :^)
+#ifndef BMPTK_BAUDRATE
+#define BMPTK_BAUDRATE HWLIB_BAUDRATE
+#endif
+
    
 }; // namespace hwlib   
